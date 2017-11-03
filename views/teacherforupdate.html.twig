@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher update</title>
+</head>
+<body>
+<h1>Teacher update</h1>
+
+<form action="teacherdoupdate.php" method="get">
+    <label for="id">Id</label>
+    <input type="number" name="id" id="id" value="{{ teacher.Id }}"/><br>
+
+    <label for="name2">Name</label>
+    <input type="text" id="name2" name="name" value="{{ teacher.Name }}"/><br>
+
+    <label for="mobile">Mobile</label>
+    <input type="text" id="mobile" name="mobile" value="{{ teacher.MobileNo }}"/><br>
+
+    <label for="salary">Salary</label>
+    <input type="number" id="salary" name="salary" value="{{ teacher.Salary }}"/>
+
+    <input type="submit" value="Update"/>
+</form>
+
+</body>
+</html>
