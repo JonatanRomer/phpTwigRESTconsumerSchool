@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teachers</title>
+</head>
+<body>
+<h1>Teachers</h1>
+
+
+{% if teachers is empty %}
+    No teachers
+{% else %}
+    <ul>
+        {% for teacher in teachers %}
+            <li>
+
+                {{ teacher.Id }}
+                <a href="teacherbyid.php?id={{ teacher.Id }}">
+                    {{ teacher.Name }}
+                </a>
+                {{ teacher.MobileNo }}
+                <a href="teacherupdate.php?id={{ teacher.Id }}">Update</a>
+                <a href="teacherdelete.php?id={{ teacher.Id }}">Delete</a>
+                <a href="classesbyteacher.php?id={{ teacher.Id }}">Classes</a>
+                <a href="studentsbyteacherid.php?id={{ teacher.Id }}">Students</a>
+            </li>
+        {% endfor %}</ul>
+{% endif %}
+
+</body>
+</html>

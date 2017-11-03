@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>School</title>
+</head>
+<body>
+<h1>School</h1>
+<h2>Teachers</h2>
+<a href="controllers/teacherbyname.php">All teachers</a>
+
+<form action="controllers/teacherbyname.php" method="post">
+    <label for="name">Name</label>
+    <input id="name" name="name"/>
+    <input type="submit" value="Search"/>
+</form>
+
+<h3>Add teacher</h3>
+
+<form action="controllers/teacheradd.php" method="post">
+    <label for="id">Id</label>
+    <input type="number" name="id" id="id"/><br>
+
+    <label for="name2">Name</label>
+    <input type="text" id="name2" name="name"/><br>
+
+    <label for="mobile">Mobile</label>
+    <input type="text" id="mobile" name="mobile"/><br>
+
+    <label for="salary">Salary</label>
+    <input type="number" id="salary" name="salary"/>
+
+    <input type="submit" value="Add"/>
+</form>
+
+
+<h2>Students</h2>
+
+<h2>Classes</h2>
+</body>
+</html>

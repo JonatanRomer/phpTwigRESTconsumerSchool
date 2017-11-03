@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher {{ teacher.Name }}</title>
+</head>
+<body>
+<h1>Teacher {{ teacher.Name }}</h1>
+Mobile {{ teacher.MobileNo }}
+Salary {% if teacher.Salary is empty %} unknown
+{% else %}{{ teacher.Salary }}
+{% endif %}
+<a href="classesbyteacher.php?id={{ teacher.Id }}">Classes</a>
+<a href="studentsbyteacherid.php?id={{ teacher.Id }}">Students</a>
+</body>
+</html>
