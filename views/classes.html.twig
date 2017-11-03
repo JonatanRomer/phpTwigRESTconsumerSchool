@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classes</title>
+</head>
+<body>
+<h1>Classes</h1>
+
+
+{% if classes is empty %}
+    No classes
+{% else %}
+    <ul>
+        {% for class in classes %}
+            <li>
+
+                {{ class.SchoolClassName }}
+
+
+            </li>
+        {% endfor %}</ul>
+{% endif %}
+
+</body>
+</html>
