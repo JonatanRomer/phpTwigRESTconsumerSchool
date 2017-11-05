@@ -3,6 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Teachers</title>
+    <style>
+        /* http://www.thesepapersites.com/2016/10/18/style-html-link-button/ */
+        .link-btn {
+            color: white;
+            background: #7fcad0;
+            padding: 5px 10px;
+            margin: 10px 10px;
+            text-align: center;
+            /*text-transform: uppercase;*/
+            letter-spacing: 1px;
+          /*  font-size: 13px;*/
+        }
+
+        .link-btn:hover {
+            background: #6ab8be;
+        }
+    </style>
 </head>
 <body>
 <h1>Teachers</h1>
@@ -11,21 +28,34 @@
 {% if teachers is empty %}
     No teachers
 {% else %}
-    <ul>
+    <table>
         {% for teacher in teachers %}
-            <li>
-
-                {{ teacher.Id }}
-                <a href="teacherbyid.php?id={{ teacher.Id }}">
+            <tr style="margin: 100px">
+                <td style="text-align: right">
+                    {{ teacher.Id }}
+                </td>
+                <td>
                     {{ teacher.Name }}
-                </a>
-                {{ teacher.MobileNo }}
-                <a href="teacherupdate.php?id={{ teacher.Id }}">Update</a>
-                <a href="teacherdelete.php?id={{ teacher.Id }}">Delete</a>
-                <a href="classesbyteacher.php?id={{ teacher.Id }}">Classes</a>
-                <a href="studentsbyteacher.php?id={{ teacher.Id }}">Students</a>
-            </li>
-        {% endfor %}</ul>
+                </td>
+                <td>
+                    <a class="link-btn" href="teacherbyid.php?id={{ teacher.Id }}">
+                        Details
+                    </a>
+                </td>
+                <td>
+                    <a class="link-btn" href="teacherupdate.php?id={{ teacher.Id }}">Update</a>
+                </td>
+                <td>
+                    <a class="link-btn" href="teacherdelete.php?id={{ teacher.Id }}">Delete</a>
+                </td>
+                <td>
+                    <a class="link-btn" href="classesbyteacher.php?id={{ teacher.Id }}">Classes</a>
+                </td>
+                <td>
+                    <a class="link-btn" href="studentsbyteacher.php?id={{ teacher.Id }}">Students</a>
+                </td>
+            </tr>
+        {% endfor %}</table>
 {% endif %}
 
 </body>
