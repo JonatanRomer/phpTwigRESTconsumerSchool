@@ -7,11 +7,13 @@
 <body>
 <h1>School</h1>
 <h2>Teachers</h2>
-<a href="controllers/teacherbyname.php">All teachers</a>
+<!--a href="controllers/teacherbyname.php">All teachers</a-->
 
-<form action="controllers/teacherbyname.php" method="post">
+<form action="controllers/teacherbyname.php" method="get">
     <label for="name">Name</label>
-    <input id="name" name="name"/>
+    <input type="text" id="name" name="name" title="Fragment of name. Empty - you get all teachers"/>
+    <label for="sort">Sort</label>
+    <input id="sort" id="sort" type="checkbox" name="sort"/>
     <input type="submit" value="Search"/>
 </form>
 

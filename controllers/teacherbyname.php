@@ -1,6 +1,22 @@
 <?php
 
+$namefragment = $_REQUEST["name"];
+$sort = $_REQUEST["sort"];
+
 $uri = "http://anbo-studentservice.azurewebsites.net/SchoolService.svc/teachers";
+
+if ($namefragment != null and $namefragment != "") {
+    $uri = $uri . "?name=" . $namefragment;
+    if ($sort == 'on') {
+        $uri = $uri ."&sort=name";
+    }
+}
+elseif ($sort == 'on') {
+    $uri = $uri ."?sort=name";
+}
+
+echo $uri;
+
 $jsondata = file_get_contents($uri);
 //print_r($jsondata);
 $convertToAssociativeArray = true;

@@ -9,8 +9,9 @@
             color: white;
             background: #7fcad0;
             padding: 5px 10px;
-            margin: 10px 10px;
+            margin: 2px 2px;
             text-align: center;
+            display: block;
             /*text-transform: uppercase;*/
             letter-spacing: 1px;
           /*  font-size: 13px;*/
@@ -30,7 +31,7 @@
 {% else %}
     <table>
         {% for teacher in teachers %}
-            <tr style="margin: 100px">
+            <tr>
                 <td style="text-align: right">
                     {{ teacher.Id }}
                 </td>
